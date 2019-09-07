@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request, render_template, abort
+from flask import Flask, redirect, url_for, request, render_template, abort,jsonify
 app = Flask(__name__)
 
 
@@ -15,12 +15,17 @@ def success(name):
 @app.route('/login/', methods=['POST'])
 def login():
     if request.method == 'POST':
-        user = request.form['uname']
-        password = request.form['psw']
+	data=request.get_json()
+        user = data['uname']
+        password = data['psw']
+	
         if user == 'admin' and password == 'admin':
-            return redirect(url_for('success', name=user))
-        else:
-            abort(401)
+		return jsonify({'result':'succcess'})
+           # return redirect(url_for('success', name=user))
+		
+	else:
+            return jsonify({'result':'failed'})
+
 
 
 if __name__ == '__main__':
