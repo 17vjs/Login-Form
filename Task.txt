@@ -1,0 +1,17 @@
+Tasks for python:-
+1) change python version from 2.7 to 3.6
+2) create a requirements.txt for dependencies in python (https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a). This is helpful for team here to use your code without using pip install every dependency
+3) I had created a .csv file(user_master.csv). Read that file in helper.py(read_csv) using python code(for help:- https://www.geeksforgeeks.org/working-csv-files-python/) and use that .csv file to authenticate users in app.py.
+4) There are 3 roles in csv (user,admin and seller). Create 3 xml in android for each role. Redirect into respective screens based on roles.
+
+Task for Android:-
+1) write a code to ask user location access in android app and print latitude and longitude as a Toast in android (code of activity in android studio)
+
+Note: Make generic code and follow proper standards
+Deadline:- Monday
+
+Call me if you need any help in coding or if something is unclear. Thanks!
+
+I will continue to add task below this for Tuesday--
+Tuesday Task:-
+1)...
