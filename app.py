@@ -19,12 +19,12 @@ def Androidlogin():
         data = request.get_json()
         user = data['uname']
         password = data['psw']
-
-        if read_csv(user, password):
-            return jsonify({'result': 'succcess'})
+        result = read_csv(user, password)
+        if result[0]:
+            return jsonify(result[1])
 
         else:
-            return jsonify({'result': 'failed'})
+            return jsonify(result[1])
 
 # serving form request from website
 @app.route('/Weblogin/', methods=['POST'])
@@ -32,9 +32,10 @@ def Weblogin():
     if request.method == 'POST':
         user = request.form['uname']
         password = request.form['psw']
+        result = read_csv(user, password)
 
-        if read_csv(user, password):
-            return redirect(url_for('success', name=user))
+        if result[0]:
+            return redirect(url_for('success', name=result[1]["role"]))
         else:
             abort(401)
 

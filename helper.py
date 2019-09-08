@@ -11,10 +11,9 @@ def read_csv(username, password):
             rows.append(row)
     u = rows[0].index('username')
     p = rows[0].index('password')
+    r = rows[0].index('role')
     for row in rows:
         if row[u] == username and row[p] == password:
-            return True
+            return [True, {"role": row[r]}]
     else:
-        return False
-
-
+        return [False, {"role": "unknown"}]
