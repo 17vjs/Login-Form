@@ -26,6 +26,17 @@ def login():
         else:
             return jsonify({'result': 'failed'})
 
+# serving form request from website
+# @app.route('/login/', methods=['POST'])
+# def login():
+#     if request.method == 'POST':
+#         user = request.form['uname']
+#         password = request.form['psw']
+#         if user == 'admin' and password == 'admin':
+#             return redirect(url_for('success', name=user))
+#         else:
+#             abort(401)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
