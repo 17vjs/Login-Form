@@ -1,0 +1,4 @@
+id,username,password,role
+1,a,a,user
+2,b,b,admin
+3,c,c,seller
