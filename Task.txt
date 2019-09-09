@@ -20,7 +20,7 @@ Tuesday Task:-
 
 Tuesday Task:-
 Python:-
-1)Create an API in flask to get list of all stores from store.csv file
+1) Create an API in flask to get list of all stores from store.csv file
 
 Android Task:-
 1) check the difference between longitude and latitide of user(from mondays task to get latitude and longitide of user) and latitude and longitide of store from that api.

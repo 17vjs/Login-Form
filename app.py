@@ -22,7 +22,6 @@ def Androidlogin():
         result = read_csv(user, password)
         if result[0]:
             return jsonify(result[1])
-
         else:
             return jsonify(result[1])
 
