@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, request, render_template, abort, jsonify
-from helper import read_csv
+from helper import read_stores_csv, read_user_master_csv
 app = Flask(__name__)
 
 
@@ -19,7 +19,7 @@ def Androidlogin():
         data = request.get_json()
         user = data['uname']
         password = data['psw']
-        result = read_csv(user, password)
+        result = read_user_master_csv(user, password)
         if result[0]:
             return jsonify(result[1])
         else:
@@ -31,12 +31,18 @@ def Weblogin():
     if request.method == 'POST':
         user = request.form['uname']
         password = request.form['psw']
-        result = read_csv(user, password)
+        result = read_user_master_csv(user, password)
 
         if result[0]:
             return redirect(url_for('success', name=result[1]["role"]))
         else:
             abort(401)
+
+
+@app.route('/stores/', methods=['POST'])
+def stores():
+    if request.method == 'POST':
+        return jsonify(read_stores_csv())
 
 
 if __name__ == '__main__':
