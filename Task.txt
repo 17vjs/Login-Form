@@ -7,6 +7,7 @@ Tasks for python:-
 Task for Android:-
 1) write a code to ask user location access in android app and print latitude and longitude as a Toast in android (code of activity in android studio)
 
+<<<<<<< HEAD
 Note: Make generic code and follow proper standards
 Deadline:- Monday
 
@@ -15,3 +16,13 @@ Call me if you need any help in coding or if something is unclear. Thanks!
 I will continue to add task below this for Tuesday--
 Tuesday Task:-
 1)...
+=======
+
+Tuesday Task:-
+Python:-
+1)Create an API in flask to get list of all stores from store.csv file
+
+Android Task:-
+1) check the difference between longitude and latitide of user(from mondays task to get latitude and longitide of user) and latitude and longitide of store from that api.
+2) If difference is less than 10 km then show all stores in the form of scrollable list in android XML
+>>>>>>> 27252fdda7210504231da74eee6e352c24ee4ec9
